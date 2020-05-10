@@ -36,28 +36,4 @@ entries:
       url: /wego_core.html
       output: web, pdf
 
-  - title: Concepts
-    output: web, pdf
-    folderitems:
-
-    - title: Context
-      url: /wego_context.html
-      output: web, pdf
-
-    - title: Modularization
-      url: /wego_modules.html
-      output: web, pdf
- 
- - title: The Central Pipeline
-    output: web, pdf
-    folderitems:
-
-    - title: HTTP
-      url: /wego_http.html
-      output: web, pdf
-
-    - title: Middleware
-      url: /wego_middleware.html
-      output: web, pdf
-
   
