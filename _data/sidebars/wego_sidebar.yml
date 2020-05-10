@@ -48,4 +48,16 @@ entries:
       url: /wego_modules.html
       output: web, pdf
    
-  
+  - title: The Central Pipeline
+    output: web, pdf
+    folderitems:
+    
+    - title: HTTP
+      url: /wego_http.html
+      output: web, pdf
+    
+    - title: Middleware
+      url: /wego_middleware.html
+      output: web, pdf
+    
+      
