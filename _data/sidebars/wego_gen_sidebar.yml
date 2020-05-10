@@ -20,7 +20,7 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Getting Started
+  - title: Core
     output: web, pdf
     folderitems:
     - title: Product 1 home

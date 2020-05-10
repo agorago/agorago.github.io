@@ -1,5 +1,5 @@
 ---
-title: "WeGO -  batteries included with the batteries"
+title: "WeGO -  batteries included "
 keywords: homepage
 tags: [getting_started, introduction]
 sidebar: wego_sidebar
