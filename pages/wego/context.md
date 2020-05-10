@@ -8,7 +8,7 @@ folder: wego
 ---
 WeGO strongly advocates the passing around of the request context object. In GO, the context.Context object must be idiomatically accepted as the first parameter of most functions and it should even be called ctx (wherever it is used). WeGO strongly advocates that most commands and services accept the context object as the first parameter for most of their operations.
 
-# How should context be used?
+## How should context be used?
 Context is used for implementing horizontal concerns. Horizontal concerns must not be typically implemented by individual services since this would lead to proliferation of the implementation of the same concern by multiple services. (This violates the Single Responsibility Principle)
 
 Context must typically not be accessed by the service object. The service object obtains all the information it needs from explicit parameter that are passed to it. For example, if a service requires an entity ID then that must be accepted explicitly to it. It must not be accessed via the context object. The WeGO framework has components that transform attributes contained in the context to explicit service parameters while invoking the service. For example, see the section on [middleware](middleware.html)
@@ -17,7 +17,7 @@ Context contains the "context" of the request. WeGO transports are responsible f
 
 Context contains fields that take care of logging, traceability, auditability etc. These fields are logged and thrown back in exceptions so that the entire context can be re-constructed to a maximum degree of precision. 
 
-# The WeGO Context package
+## The WeGO Context package
 This package is idiomatically used and referred to as wegocontext. In code, it is imported as: 
 ```
     import wegocontext "github.com/agorago/wego/context"

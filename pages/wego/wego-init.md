@@ -7,7 +7,7 @@ permalink: wego_init.html
 folder: wego
 ---
 
-# The Approach
+## The Approach
 
 Initialization always happens during start up. All relevant strategies, commands etc. must be instantiated as singletons when the program starts up.
 

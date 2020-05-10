@@ -6,7 +6,7 @@ toc: true
 permalink: wego_core.html
 folder: wego
 ---
-# The WEGO Framework package
+## The WEGO Framework package
 WEGO is at its core, a framework that invokes a service (more precisely it invokes an operation in a
 service). For this to happen, it needs the following:
 1. It needs to know the services that exist.
@@ -34,22 +34,22 @@ invoked.
 middleware.These chains invoke a set of middlewares and finally culminate in the service. Please see
 the internal/mw package for more information about middleware chains.
  
-# Service Registration
+## Service Registration
 
 A service can have one or more multiple methods called Operations. Each operation can in turn 
 support parameters. 
 
-All BPlus services register here. They can register in two modes:
+All WeGO services register here. They can register in two modes:
 1. Client Mode - the actual service information is registered. However the service is not exposed
 in this mode using any transport. e
 2. Server Mode -  the service is not only registered. It is also exposed via a transport layer such as HTTP. 
 
-Client mode is useful if it is intended to invoke the service using the Proxy framework that BPlus supports.
+Client mode is useful if it is intended to invoke the service using the Proxy framework that WeGO supports.
 However in this mode,  transports are not supported. Consequently, the service will not be available for 
 remote invocation via HTTP or other means.  Services can only be registered in server mode in one executable.
 In other executables, the service is registered only as in client mode.
 
-# How do services register themselves?
+## How do services register themselves?
 
 A service is registered using a model object called _Service Descriptor_ that describes the service. It contains
 Name and a description. Besides that it contains an array of operations that describe the operations that 
@@ -62,11 +62,11 @@ call the actual service when a request for service is received by the transport 
 
 Transports are discussed a little later.
 
-# Operation Descriptor
+## Operation Descriptor
 
 Operation descriptors describe the operation that belongs to the service. The operation would be typically
 exposed by the transport. Since an operation is accessible from outside, it will expose a URL. Operations
-are invoked by BPlus when the transport is accessed. (for example when someone invokes the HTTP URL)
+are invoked by WeGO when the transport is accessed. (for example when someone invokes the HTTP URL)
 
 Operation descriptor gives details about the operation such as the following:
 name - used to actually invoke the operation from the service reference in ServiceDescriptor
@@ -77,7 +77,7 @@ OpRequestMaker , OpResponseMaker - These functions generate empty request and re
 populate the objects from serialized streams of data (such as JSON streams)
 OpMiddleware, ProxyMiddleware - the middleware functions that will be invoked when the operation is invoked
 
-# Transports 
+## Transports 
 
 Transport provides the end point that initiates all service invocations. Example: an HTTP end point which 
 when invoked, invokes the operation. There are properties in Operation Descriptor which can be used to 
@@ -85,10 +85,10 @@ configure the transport end points. For example, the HTTP end point is configure
 
 Transports are extensions to the core framework and are implemented using an OperationRegistration. 
 Transports register themselves with the core framework by using RegisterOperation. The transports will then
-be provided an opportunity to register every operation that is registered with BPlus. This happens only 
+be provided an opportunity to register every operation that is registered with WeGO. This happens only 
 when the service is registed in server-mode. 
 
-# Param Descriptor
+## Param Descriptor
 
 ParamDescriptor allows the registration of each parameter that needs to be passed to the operation on 
 invocation.
@@ -101,7 +101,7 @@ available as header params.
 PAYLOAD - the payload parameter is passed as part of the body of the request. (for example HTTP 
 request body) Payload will be de-serialized from a resource stream such as JSON.
 
-# Middleware Chain
+## Middleware Chain
 
 The framework package defines a Middleware Chain. This implements the chain of responsibility pattern.
 Please see middleware_test.go to get an idea about the usage of this class.
