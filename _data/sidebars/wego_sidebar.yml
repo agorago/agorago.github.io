@@ -60,4 +60,19 @@ entries:
       url: /wego_middleware.html
       output: web, pdf
     
+    - title: Logging
+      url: /wego_log.html
+      output: web, pdf
+    
+    - title: WeGO Workflow
+      output: web, pdf
+      folderitems:
+      
+    - title: State Entity Transports
+      url: /wego_state_entity.html
+      output: web, pdf
+      
+    - title: The State Transition Machine
+      url: /wego_stm.html
+      output: web, pdf
       
