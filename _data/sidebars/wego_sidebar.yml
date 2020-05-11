@@ -24,7 +24,7 @@ entries:
     folderitems:
 
     - title: Overview
-      url: /index.html
+      url: /wego_landing_page.html
       output: web, pdf
       type: homepage
 

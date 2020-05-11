@@ -7,9 +7,11 @@ permalink: wego_intro.html
 folder: wego
 ---
 
-## WeGO - the GO LANG Application Development Framework
+## WeGO - the Go Lang In process Service Mesh
 
-WeGO (pronounced as WE-GO or V-GO) is an application development framework. It provides you a set of libraries, hooks to other GO LANG libraries, a set of conventions, transport hooks, code generation capabilities and build tools to make the creation of a GOLANG based micro service a cinch.
+WeGO (pronounced as We-GO or V-GO) is an application development framework. It provides you a set of libraries, hooks to other GO LANG libraries, a set of conventions, transport hooks, code generation capabilities and build tools to make the creation of a GOLANG based micro service a cinch.
+
+In its essence, WeGO acts like an in process service mesh. 
 
 WeGO is very concerned about the adherence to design tenets such as SOLID principles. Therefore, the best practices recommended by WeGO tend to foster the correct design principles and paradigms.
 

@@ -6,61 +6,41 @@ toc: true
 permalink: wego_core.html
 folder: wego
 ---
-## The WEGO Framework package
-WEGO is at its core, a framework that invokes a service (more precisely it invokes an operation in a
-service). For this to happen, it needs the following:
-1. It needs to know the services that exist.
-2. It needs to know their dependencies as defined in a makeService()
-3. It needs to know about the interfaces exposed by the service (so that it can potentially mock the
-service for testing purposes).
-4. It needs to know the transports that the service decides to expose so that WEGO can provide the 
-transport.
-5. It needs to know what middlewares that the service wants to have before it. The middlewares can be
-at the client side or the server side. 
+## The WEGO Core Service Mesh Framework 
+WEGO can be thought of as an in process service mesh. It completely abstracts the service from the complexity of dealing with multiple transports, handling transformations and implementing horizontal requirements. On the client side, It can allow clients to access remote services by providing a proxy. 
 
+The concept of transports in WeGO is much more generic and will be discussed in a separate document
 
-The operation is invoked in 
-response to a request at a transport layer. The core framework package provides the following features:
-0. Instantiate the framework along with a DI bean factory. DI in GO has thus far been provided by 
-wiring frameworks that There is no core bean factory within GO. Hence
-it becomes difficult to do things like Auto-wiring in the style of th
-1. The ability for a service to register itself with the framework.
-2. The ability for a transport such as HTTP to register an operation in order to expose it to the 
-outside world.
-3. Definition and registration of middlewares. These middlewares are invoked whenever the service is 
-invoked. 
-4. Base interfaces are defined in this package. These interfaces facilitate service registration.
-5. This package also implements the notion of a Middleware Chain which allows the set up of chains of
-middleware.These chains invoke a set of middlewares and finally culminate in the service. Please see
-the internal/mw package for more information about middleware chains.
+For now, let us discuss this in the context of HTTP.  Look at the diagram below:
+
+![Interaction Diagram](images/wego/wego_interaction.png)
+
+WeGO library is present in both the client and server process. In the client process, WeGO provides a proxy to interact with the service. The WeGO proxy interacts with the server process via HTTP. In the server process, WeGO provides the transport end point. Upon invocation, the HTTP end point invokes the actual service.
+
+In this way, the WeGO library completely abstracts the service invocation from both the client and the server side. The core framework allows the registration of services and their operations. It provides the fundamental edifice on which the entire framework rests. Here are the salient features of the core framework:
+
+1. Provide ability for a service to register itself with the framework. Services expose operations which accept parameters that can be encoded in multiple ways.  See the http module for a more detailed discussion.
+2. Provide ability for a transport such as HTTP to register itself as an extension to the WeGO framework.
+3. Definition and registration of middlewares. These middlewares are invoked whenever the service is invoked. Middlewares can be registered for both client (proxy) and server.
  
 ## Service Registration
 
-A service can have one or more multiple methods called Operations. Each operation can in turn 
-support parameters. 
+A service can have one or more multiple methods called Operations. Each operation can in turn accept parameters which can be encoded in multiple ways in the incoming request. 
 
-All WeGO services register here. They can register in two modes:
-1. Client Mode - the actual service information is registered. However the service is not exposed
-in this mode using any transport. e
+WeGO services can register themselves in two modes:
+1. Client Mode - the actual service information is registered. However the service is not exposed in this mode using any transport. e
 2. Server Mode -  the service is not only registered. It is also exposed via a transport layer such as HTTP. 
 
-Client mode is useful if it is intended to invoke the service using the Proxy framework that WeGO supports.
-However in this mode,  transports are not supported. Consequently, the service will not be available for 
-remote invocation via HTTP or other means.  Services can only be registered in server mode in one executable.
-In other executables, the service is registered only as in client mode.
+Client mode is useful if it is intended to invoke the service using the Proxy framework that WeGO supports.However in this mode,  transports are not supported. Consequently, the service will not be available for 
+remote invocation via HTTP or other means.  Services can only be registered in server mode in one executable. In other executables, the service is registered only as in client mode.
 
 ## How do services register themselves?
 
-A service is registered using a model object called _Service Descriptor_ that describes the service. It contains
-Name and a description. Besides that it contains an array of operations that describe the operations that 
-the service supports. Each operation is described using OperationDescriptor.
-
-If the service is registered in server mode, then a reference to the actual service is expected to be 
-populated in the  the service descriptor. If service reference is null then it is assumed that the service 
+A service is registered using a model object called _Service Descriptor_ that describes the service. It contains Name and a description. Besides that it contains an array of operations that describe the operations that the service supports. Each operation is described using OperationDescriptor.
+ 
+If the service is registered in server mode, then a reference to the actual service is expected to be populated in the  the service descriptor. If service reference is null then it is assumed that the service 
 is registered in client mode. Otherwise, the service reference is required since the transport needs to 
 call the actual service when a request for service is received by the transport end point.
-
-Transports are discussed a little later.
 
 ## Operation Descriptor
 
@@ -79,19 +59,13 @@ OpMiddleware, ProxyMiddleware - the middleware functions that will be invoked wh
 
 ## Transports 
 
-Transport provides the end point that initiates all service invocations. Example: an HTTP end point which 
-when invoked, invokes the operation. There are properties in Operation Descriptor which can be used to 
-configure the transport end points. For example, the HTTP end point is configured using the URL property.
+Transport provides the end point that initiates all service invocations. Example: an HTTP end point which when invoked, invokes the operation. There are properties in Operation Descriptor which can be used to configure the transport end points. For example, the HTTP end point is configured using the URL property.
 
-Transports are extensions to the core framework and are implemented using an OperationRegistration. 
-Transports register themselves with the core framework by using RegisterOperation. The transports will then
-be provided an opportunity to register every operation that is registered with WeGO. This happens only 
-when the service is registed in server-mode. 
+Transports are extensions to the core WeGO framework amd expose the service using an end point such as a URL. Transports take care of serialization and de-serialization of requests and responses.
 
 ## Param Descriptor
 
-ParamDescriptor allows the registration of each parameter that needs to be passed to the operation on 
-invocation.
+ParamDescriptor allows the registration of each parameter that needs to be passed to the operation on invocation.
 An operation can have the following types of parameters as determined by ParamOrigin:
 Context - a mandatory first parameter for every operation. It should always be with name ctx. This
 contains the entire context of the request.

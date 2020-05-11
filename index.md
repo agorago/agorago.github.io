@@ -1,5 +1,5 @@
 ---
-title: "WeGO -  batteries included "
+title: "WeGO -  The In Process Service Mesh & Application Development Framework "
 keywords: homepage
 tags: [getting_started, introduction]
 sidebar: wego_sidebar
@@ -20,7 +20,7 @@ The Go project includes the language itself, its tools and standard libraries, a
 
 The idea to develop a framework came from a recent engagement where I was looking to see how we can enable developers of a start up to become extremely productive in developing a complex application. As a firm believer of [Occam's Razor](https://en.wikipedia.org/wiki/Occam%27s_razor) I believe in simplicity of design to solve even complex problems. 
 
-Go seems to support that thinking. As the legendary Rob Pike puts it, "Complexity is multiplicative". 
+Go seems to support that thinking. As Rob Pike puts it, "Complexity is multiplicative". 
 
 <a name='thewhat'/>
 # Why do we need a framework?
@@ -40,12 +40,11 @@ In my experience of working almost three decades in application development, I h
 
 * Very often, there is not much of a distinction between an architect role and a developer role. Application developers must concentrate on one important thing -  i.e. understand the domain and write application code. Architects must choose the frameworks, integrate them together, establish standards and write framework code.
 
-So, my idea was to build a RAD (Rapid Application Development) framework to get all developers immediately productive. The RAD must also establish standards, conventions and provide common services required throughout the estate. 
-
-Which lead me to WeGO!
+So, my idea was to build a RAD (Rapid Application Development) framework to get all developers immediately productive. The RAD must also establish standards, conventions and provide common services required throughout the estate.  After a little consideration, it was evident that the framework must also act like a service mesh since it abstracts access to all services. 
 
 # What does WeGO do?
-* WeGO contains a Go Lang Library that contains framework code.
+* WeGO is conceived as an in process service mesh. It allows developers to write services without worrying about transports, middlewares, horizontal services, transformations etc.
+* WeGO is a Go Lang Library that contains framework code. But the framework code is just the tip of the iceberg.
 * WeGO comes bundled with a code generator that generates typical boiler plate code that conforms to a stereotype. (such as a HTTP over JSON Micro Service for example)
 *  WeGO comes with documentation that talks about coding principles and how to achieve these principles.
 *  WeGO ships with examples that contain a lot of example code.
@@ -53,5 +52,6 @@ Which lead me to WeGO!
 *  WeGO  identifies common usecases that can be solved (eg. developing microservices, creating executables etc.) These use cases become WeGO stereotypes. Code generators help in generating code that conforms to these stereotypes
 * WeGO helps in the solution of horizontal concerns. It integrates with myriads of different frameworks that facilitate logging, auditing, i18n etc.
 * WeGO establishes standards and conventions that ease code development and maintenance.
+
 
 
