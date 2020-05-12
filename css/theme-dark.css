@@ -4,7 +4,7 @@
     font-size:16px;
 }
 
-body, .panel-body{
+body, .panel-body, #myTabContent{
     background-color: black;
     color: wheat;
 }
