@@ -4,11 +4,15 @@
     font-size:16px;
 }
 
-body, .panel-body, #myTabContent{
+body, .panel-body{
     background-color: black;
     color: wheat;
 }
 
+#myTabContent{
+    background-color: darkslategrey;
+    color: wheat;
+}
 
 h1 { color: yellow;}
 h2 {color: white;}
