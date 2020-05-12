@@ -14,7 +14,9 @@
 <link rel="stylesheet" href="css/customstyles.css">
 <link rel="stylesheet" href="css/boxshadowproperties.css">
 <!-- most color styles are extracted out to here -->
-<link rel="stylesheet" href="css/theme-dark.css">
+<link rel="stylesheet" href="css/theme-dark.css" media='' id='dark'>
+<link rel="stylesheet" href="css/theme-green.css" media='none' id='green'>
+<link rel="stylesheet" href="css/theme-blue.css" media='none' id='blue'>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -39,3 +41,25 @@
 <![endif]-->
 
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.url }}">
+
+<script>
+function setThemeDark(){
+    document.getElementById('dark').media=''
+    document.getElementById('green').media='none'
+    document.getElementById('blue').media='none'
+}
+
+function setThemeBlue(){
+    document.getElementById('dark').media='none'
+    document.getElementById('green').media='none'
+    document.getElementById('blue').media=''
+}
+
+function setThemeGreen(){
+    document.getElementById('dark').media='none'
+    document.getElementById('green').media=''
+    document.getElementById('blue').media='none'
+}
+
+
+</script>
