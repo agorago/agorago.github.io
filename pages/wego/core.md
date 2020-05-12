@@ -38,10 +38,8 @@ WeGO services can register themselves in two modes:
 1. Client Mode - the service information is registered. However the service is not exposed in this mode using any transport. This mode works well in the client side (proxy side) as shown in the diagram above
 2. Server Mode -  the service is not only registered. It is also exposed via a transport layer such as HTTP.  This mode works for the server side shown above. 
 
-##  A note on Deployables
-<p class='message'>
-WeGO advocates that a bunch of services must be packaged together into a deployable artifact. A service will be hosted by one deployable in the server mode - i.e. the service will be exposed via HTTP using one deployable only. Other deployables will invoke the service using proxy. The service will be configured in "client mode" in every other deployable. 
-</p>
+##  A Note on Deployables
+{% include note.html content="WeGO advocates that a bunch of services must be packaged together into a deployable artifact. A service will be hosted by one deployable in the server mode - i.e. the service will be exposed via HTTP using one deployable only. Other deployables will invoke the service using proxy. The service will be configured in 'client mode' in every other deployable." %}
 Client mode is useful if it is intended to invoke the service using the Proxy framework that WeGO supports.However in this mode,  transports are not supported. 
 
 ## How do services register themselves?
