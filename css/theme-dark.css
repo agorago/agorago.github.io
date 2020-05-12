@@ -4,10 +4,11 @@
     font-size:16px;
 }
 
-body {
+body, .panel-body{
     background-color: black;
     color: wheat;
 }
+
 
 h1 { color: yellow;}
 h2 {color: white;}
