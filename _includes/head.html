@@ -43,23 +43,45 @@
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.url }}">
 
 <script>
+
+function storeCurrentTheme(s){
+    localStorage.setItem('WeGOTheme', s);
+}
+
+function switchToCurrentTheme(){
+    switch(localStorage.getItem("WeGOTheme")){
+        case "Dark":
+            setThemeDark();
+            break;
+        case "Green":
+            setThemeGreen();
+            break;
+        case "Blue":
+            setThemeBlue();
+            break;
+    }
+}
+
 function setThemeDark(){
     document.getElementById('dark').media=''
     document.getElementById('green').media='none'
     document.getElementById('blue').media='none'
+    storeCurrentTheme("Dark")
 }
 
 function setThemeBlue(){
     document.getElementById('dark').media='none'
     document.getElementById('green').media='none'
     document.getElementById('blue').media=''
+    storeCurrentTheme("Blue")
 }
 
 function setThemeGreen(){
     document.getElementById('dark').media='none'
     document.getElementById('green').media=''
     document.getElementById('blue').media='none'
+    storeCurrentTheme("Green")
 }
 
-
+switchToCurrentTheme()
 </script>
