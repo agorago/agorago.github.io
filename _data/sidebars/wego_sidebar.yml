@@ -23,7 +23,7 @@ entries:
     output: web, pdf
     folderitems:
 
-    -title:  Why WeGO
+    - title:  Why WeGO
      url: /index.html
      output: web,pdf
      
