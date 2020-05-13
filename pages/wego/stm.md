@@ -8,23 +8,13 @@ folder: wego
 ---
 ## Introduction
 
-Transactional entities exhibit a life cycle. Their lifecycle can be modeled using events. Examples of such 
-entities are orders, payments, customer relationship issues etc. These entities have a workflow associated
-with them. The workflow dictates the kind of events that these entities undergo. In most organizations, these
-workflows are extremely dynamic. They can evolve over a period of time. 
+Transactional entities exhibit a life cycle. Their lifecycle can be modeled using events. Examples of such entities are orders, payments, customer relationship issues etc. These entities have a workflow associated with them. The workflow dictates the kind of events that these entities undergo. In most organizations, these workflows are extremely dynamic. They can evolve over a period of time. 
 
-Hence it is imperative to model the workflow as a first class entity. This allows the workflow to evolve 
-as the organizations evolve. Besides,  an organization such as Intelligent B enters into contracts with 
-myriad organizations across multiple geographies. This means that it is hard to evolve if the lifecycle 
-of key entities are hard-coded to conform to specific workflows. 
+Hence it is imperative to model the workflow as a first class entity. This allows the workflow to evolve as the organizations evolve. 
 
-The state transition machine is an artifact that separates the workflow from the core entity. Workflows 
-can be modeled graphically and fed into a state machine using a JSON (or similar). The state machine ensures
-that the entity changes state in conformance to the workflow. At various points of the workflow code can get 
-called. This code can do specific actions.
+The state transition machine is an artifact that separates the workflow from the core entity. Workflows can be modeled graphically and fed into a state machine using a JSON (or similar). The state machine ensures that the entity changes state in conformance to the workflow. At various points of the workflow code can get called. This code can do specific actions.
 
-This gives a huge deal of flexibility to the service that is responsible for the entity. The WeGO state 
-transition machine is a simple but effective way of managing entity workflows. 
+This gives a huge deal of flexibility to the service that is responsible for the entity. The WeGO state transition machine is a simple but effective way of managing entity workflows. 
 
 ## Typical Life Cycle of a State Managed Transactional Entity 
 
@@ -40,8 +30,7 @@ as nodes connected by events which are edges connecting the nodes. An entity can
 state to the next only by handling events that depict the edges. 
 
 ## The WeGO State Machine (STM) - code 
-The WeGO state machine provides a way to implement a state machine by capturing the entire STD using a
-JSON. 
+The WeGO state machine provides a way to implement a state machine by capturing the entire STD using a JSON. 
 
 In code, this is done by invoking the _makeStm_ method. 
 ```golang

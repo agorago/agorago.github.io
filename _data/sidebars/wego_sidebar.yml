@@ -40,9 +40,9 @@ entries:
     output: web,pdf
     folderitems: 
       
-    - title: What to download?
+    - title: Setting up WeGO
       output: web,pdf
-      url: /downloading_prereqs.html
+      url: /wego_setup.html
 
   - title: Concepts
     output: web, pdf
