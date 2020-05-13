@@ -24,8 +24,8 @@ entries:
     folderitems:
 
     - title:  Why WeGO
-     url: /index.html
-     output: web,pdf
+      url: /index.html
+      output: web,pdf
      
     - title: Overview
       url: /wego_landing_page.html
@@ -39,6 +39,7 @@ entries:
   - title: Getting Started
     output: web,pdf
     folderitems: 
+      
     - title: What to download?
       output: web,pdf
       url: /downloading_prereqs.html
