@@ -41,3 +41,24 @@ The payload parameter is picked up from the Payload key specified above.
 <a name='proxy_pipeline'/>
 ## The Proxy Pipeline
 The proxy pipeline is illustrated below:
+![proxy pipeline](/images/wego/wego-proxy-pipeline.png)
+
+The pipeline starts with a proxy entry point and ends with the http invoker. 
+
+### HTTP Proxy Entry Point
+This has the signature as:
+```go
+ProxyEntrypoint(ctx context.Context, od fw.OperationDescriptor, params ...interface{}) (interface{}, error)
+```
+
+The context passed must have all the headers that are required to be sent via HTTP.
+The operation descriptor must contain information about the service that needs to be remotely accessed.
+The params contains the actual params that need to be passed to the service
+
+The HTTP entry point puts all the information in the context from the params either as individual HEADER keys or the payload key depending on the configuration in the Operation descriptor. 
+
+It sets up the pipeline with proxy middlewares specified in the operation descriptor.
+The last middleware inserted is the http invoker.
+
+### The Proxy Pipeline Terminator - http-invoker
+The http-invoker is responsible for invoking the service. Please see additional notes in the [HTTP module](/wego_http.html#httpinvoker)

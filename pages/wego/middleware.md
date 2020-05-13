@@ -25,7 +25,7 @@ All the middlewares and entry points, service invokers (which itself is the last
 # Client Side & Server Side Middlewares
 The WeGO middleware interface is identical for both client side and server side middlewares. The passed parameters in the context object are also identical for both client side and server side. This gives a potential for re-use of the same middleware for both client side and server side work. The entire sequence is shown in the diagram below:
 
-![Tracing a request from client to server](tracing-request.png)
+![Tracing a request from client to server](/images/wego/tracing-request.png)
 
 ## The Entry Points
 An entry point is the point of entry to invoke WeGO services or proxies. There are two entry points - one for the server side and the other one for invoking a proxy. 

@@ -21,7 +21,7 @@ The HTTP module currently supports JSON as the default encoding mechanism. Other
 The transport uses go-kit and MUX to expose the HTTP transport. The MUX is enhanced with middleware that works well with New Relic so that the HTTP request/response statistics are automatically captured.
 
 The HTTP transport uses the [WeGO Service Pipeline](wego_pipeline.html) to invoke the service. 
-
+<a name='httpinvoker'/>
 ## Consuming an HTTP service
 A client-side registration is sufficient to access a service using a HTTP Proxy. In this case,  the WeGO client obtains the service descriptor to know about how to access the service. 
 
