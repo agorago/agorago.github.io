@@ -5,6 +5,7 @@ sidebar: wego_sidebar
 toc: true
 permalink: wego_config.html
 folder: wego
+summary: How does WeGO framework handle configuration properties. Where are they read from?
 ---
 ## The WEGO Configurations Framework
 WeGO uses the versatile [viper framework](https://github.com/spf13/viper) for configuration management.

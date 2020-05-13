@@ -5,6 +5,7 @@ sidebar: wego_sidebar
 toc: true
 permalink: wego_middleware.html
 folder: wego
+summary: What are the components of the WeGO middleware framework?
 ---
 ## Introduction 
 WeGO ups the ante in its treatment of middlewares and entry points. It defines and implements horizontal concerns using a comprehensive set of middlewares. It also lays out guidelines as to what problems must be solved using Middlewares. 

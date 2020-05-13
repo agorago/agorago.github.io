@@ -5,6 +5,7 @@ sidebar: wego_sidebar
 toc: true
 permalink: wego_log.html
 folder: wego
+summary: Logging using the WeGO framework. How is Uber's logger customized for WeGO?
 ---
 ## WeGO Logging
 

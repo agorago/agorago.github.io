@@ -5,6 +5,7 @@ sidebar: wego_sidebar
 toc: true
 permalink: wego_state_entity.html
 folder: wego
+summary: Introducing the WeGO state entity.
 ---
 ## State Entity package
 

@@ -5,6 +5,7 @@ sidebar: wego_sidebar
 toc: true
 permalink: wego_core.html
 folder: wego
+summary: The core of the WeGO framework. How does service registration work?
 ---
 ## The WEGO Core Service Mesh Framework 
 WEGO can be thought of as an in process service mesh. It completely abstracts the service from the complexity of dealing with multiple transports, handling transformations and implementing horizontal requirements. 

@@ -5,6 +5,7 @@ sidebar: wego_sidebar
 toc: true
 permalink: wego_modules.html
 folder: wego
+summary: Approach to modularization.
 ---
 
 ## WeGO Modules 

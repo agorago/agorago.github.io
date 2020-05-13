@@ -5,6 +5,7 @@ sidebar: wego_sidebar
 toc: true
 permalink: wego_error_handling.html
 folder: wego
+summary: The approach to error handling. How are errors generated and passed around?
 ---
 ## The Approach
 GO Lang relies on errors. It is idiomatic and encouraged to return sensible actionable errors. 

@@ -5,6 +5,7 @@ sidebar: wego_sidebar
 toc: true
 permalink: wego_pipeline.html
 folder: wego
+summary: Introductng the WeGO framework pipeline.
 ---
 ## Introduction
 The WeGO framework establishes a pipeline for every registered service. Each registered service is invoked at the end of the pipeline. 

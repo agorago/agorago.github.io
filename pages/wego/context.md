@@ -5,6 +5,7 @@ sidebar: wego_sidebar
 toc: true
 permalink: wego_context.html
 folder: wego
+summary: How is context passed around in the WeGO framework? How to use it? Who can access it?
 ---
 WeGO strongly advocates the passing around of the request context object. In GO, the context.Context object must be idiomatically accepted as the first parameter of most functions and it should even be called ctx (wherever it is used). WeGO strongly advocates that most commands and services accept the context object as the first parameter for most of their operations.
 

@@ -5,6 +5,7 @@ sidebar: wego_sidebar
 toc: true
 permalink: wego_stm.html
 folder: wego
+summary: Introducing the WeGO state transition machine (STM)
 ---
 ## Introduction
 

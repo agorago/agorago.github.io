@@ -5,6 +5,7 @@ sidebar: wego_sidebar
 toc: true
 permalink: wego_http.html
 folder: wego
+summary: How is the HTTP transport handled? How is it handled in the server side and the client side?
 ---
 ## Introduction
 One of the objectives of WeGO is to expose services via transports. The HTTP module exposes the HTTP transport to all services which have registered with a URL in WeGO. A URL exposes an operation in a service. As the service gets registered in WeGO, the http module exposes every operation via its configured URL 

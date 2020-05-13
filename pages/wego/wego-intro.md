@@ -5,6 +5,8 @@ sidebar: wego_sidebar
 toc: true
 permalink: wego_intro.html
 folder: wego
+summary: Introduction to WeGO. Overview of basic features.
+
 ---
 
 ## WeGO - the Go Lang In process Service Mesh

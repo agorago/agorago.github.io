@@ -5,6 +5,7 @@ sidebar: wego_sidebar
 toc: true
 permalink: wego_init.html
 folder: wego
+summary: How is a WeGO service initialized? How is DI handled?
 ---
 
 ## The Approach
