@@ -19,22 +19,29 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Basics
+  - title: Introduction
     output: web, pdf
     folderitems:
 
+    -title:  Why WeGO
+     url: /index.html
+     output: web,pdf
+     
     - title: Overview
       url: /wego_landing_page.html
       output: web, pdf
       type: homepage
 
-    - title: Introduction
+    - title: Features
       url: /wego_intro.html
       output: web, pdf
 
-    - title: Core Framework
-      url: /wego_core.html
-      output: web, pdf
+  - title: Getting Started
+    output: web,pdf
+    folderitems: 
+    - title: What to download?
+      output: web,pdf
+      url: /downloading_prereqs.html
 
   - title: Concepts
     output: web, pdf
@@ -48,22 +55,42 @@ entries:
       url: /wego_modules.html
       output: web, pdf
    
-  - title: The Central Pipeline
+  - title: WeGO Pipeline
     output: web, pdf
     folderitems:
     
+    - title: Core Framework
+      url: /wego_core.html
+      output: web, pdf
+ 
+    - title: Introducing the WeGO Pipeline
+      url: /wego_pipeline.html
+      output: web, pdf
+
     - title: HTTP
       url: /wego_http.html
       output: web, pdf
-    
+
     - title: Middleware
       url: /wego_middleware.html
       output: web, pdf
-    
+     
+  - title: Horizontal Requirements
+    output: web, pdf
+    folderitems:
+
     - title: Logging
       url: /wego_log.html
       output: web, pdf
     
+    - title: Internationalization Support
+      url: /wego_i18n.html
+      output: web, pdf
+    
+    - title: Configuration Parameters
+      url: /wego_config.html
+      output: web, pdf
+
   - title: WeGO Workflow
     output: web, pdf
     folderitems:

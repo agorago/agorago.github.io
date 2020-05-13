@@ -57,7 +57,6 @@ wegoService :=
 wegoService.RegisterService("<service-name>",serviceDescriptor)
 ```
 
- 
 If the service is registered in server mode, then a reference to the actual service is expected to be populated in the  the service descriptor. If service reference is null then it is assumed that the service is registered in client mode. 
 
 ## Operation Descriptor
