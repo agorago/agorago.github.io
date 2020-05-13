@@ -56,7 +56,7 @@ import fooerr "github.com/.../fooservice/internal/err"
 err := fooerr. MakeWeGOHTTPError(ctx, http.StatusBadRequest, fooerr.FileNotFound, map[string]interface{}{
 			"Filename": filename}
 ```
-Notice that the place holder "Filename" is passed when creating the error.
+Notice how the place holder "Filename" is passed when creating the error.
 
 
 

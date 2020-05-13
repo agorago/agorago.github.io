@@ -8,9 +8,9 @@ folder: wego
 summary: How does WeGO framework handle configuration properties. Where are they read from?
 ---
 ## The WEGO Configurations Framework
-WeGO uses the versatile [viper framework](https://github.com/spf13/viper) for configuration management.
+WeGO uses the [viper framework](https://github.com/spf13/viper) for configuration management.
 
-TOML files will contain the configurations. They will be located in ${CONFIGPATH}/env/prod or dev or test or default folders. The _default_ folder is special. It contains the default configuration. The other folders contain the environment specific configuration. The environment is specified using the ENV environment variable.
+<a href="#" data-toggle="tooltip" data-original-title="{{site.data.glossary.toml}}">TOML</a>  files will contain the configurations. They will be located in ${CONFIGPATH}/env/prod or dev or test or default folders. The _default_ folder is special. It contains the default configuration. The other folders contain the environment specific configuration. The environment is specified using the ENV environment variable.
 
 All the TOML files contained in the folders are read during start up. Programs requiring configurations must use the config package to obtain the configuration. Sample below:
 ```go

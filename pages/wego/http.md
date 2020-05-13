@@ -62,7 +62,7 @@ curl   localhost:5000/BarService/FooOperation?Param1=29
 ```
 curl  localhost:5000/BarService/FooOperation/29
 ```
-Please see [stringdemoapi](github.com/agorago/stringdemoapi/blob/master/register/register.go) for a demonstration of all these features.
+Please see [stringdemoapi](https://github.com/agorago/stringdemoapi/blob/master/register/register.go) for a demonstration of all these features.
 
 ## How does HTTP Proxy handle the response?
 The HTTP proxy invokes the URL and obtains a response to it. The response is then deserialized back to the ResponsePayload struct and returned back to the caller.
