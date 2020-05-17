@@ -8,6 +8,9 @@ body, .panel-body{
     background-color: black;
     color: wheat;
 }
+blockquote{
+    color: white;
+}
 
 #myTabContent{
     background-color: darkslategrey;
