@@ -51,7 +51,11 @@ entries:
     - title: Context
       url: /wego_context.html
       output: web, pdf
-  
+
+    - title: WeGO Initialization
+      url: /wego_init.html
+      output: web,pdf
+      
     - title: Modularization
       url: /wego_modules.html
       output: web, pdf
