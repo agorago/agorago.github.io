@@ -14,9 +14,7 @@ Go Lang has a great ecosystem with multiple frameworks and tools. One of the pro
 
 The [Go Programming Language](https://www.gopl.io/) book best explains it as follows:
 
-<p class='message'>
-The Go project includes the language itself, its tools and standard libraries, and last but not least, a cultural agenda of radical simplicity.
-</p>
+> The Go project includes the language itself, its tools and standard libraries, and last but not least, a cultural agenda of radical simplicity.
 
 The idea to develop a framework came from a recent engagement where I was looking to see how we can enable developers of a start up to become extremely productive in developing a complex application. As a firm believer of [Occam's Razor](https://en.wikipedia.org/wiki/Occam%27s_razor) I believe in simplicity of design to solve even complex problems. 
 
