@@ -119,7 +119,6 @@ Of course. There is nothing special in a WeGO service. It is like any other serv
 ## API Module structure
 API has the following packages:
 ```
-.
 ├── api
 │   └── api.go
 ├── configs
@@ -147,5 +146,70 @@ API has the following packages:
 └── stringdemoapi-init.go
 ```
 
+* **api** folder contains the api definition (incuding model definitions as is the case above)
+* **configs** folder contains all the information about environment variables and resource bundles. See [configs](/wego_config.html)
+* **go.mod and go.sum** are the usual go module files - nothing special
+* **internal/err** - contains the error codes used. See [error handling in WeGO](/wego_error_handling.html)
+* **proxy** contains the proxy that invokes a [WeGO pipeline](/wego_pipeline.html) that culminates in a HTTP call to the proxy. It might also contain any middlewares. See the [proxy framework](/wego_pipeline.html#proxy_pipeline)
+*  **register** contains the class that registers the service with WeGO in a client mode i.e. it supplies the registration information without supplying the service to be invoked.
+* **stringdemo-init.go** contains the initialization code for the API. See [module initialization](/wego_init.html)
+
+## Service Module Structure
+The structure is shown below:
+```
+├── Makefile
+├── bin
+│   ├── coverage.txt
+│   ├── main
+│   └── swagger-gen
+├── configs
+│   ├── bundles
+│   │   └── en-US
+│   │       └── stringdemoservice.toml
+│   └── env
+│       ├── default
+│       │   └── def.toml
+│       ├── dev
+│       │   └── dev.toml
+│       └── prod
+│           └── prod.toml
+├── dependencies.txt
+├── go.mod
+├── go.sum
+├── initilizers.go
+├── internal
+│   ├── cmd
+│   │   ├── main
+│   │   │   └── main.go
+│   │   └── swagger-gen
+│   │       └── swagger-gen-main.go
+│   ├── docs
+│   │   ├── swagger-ops.go
+│   │   └── swagger-service.go
+│   ├── err
+│   │   ├── codes.go
+│   │   └── wegoerrorcode_string.go
+│   ├── register
+│   │   └── register.go
+│   ├── scripts
+│   │   ├── copy-bundles.sh
+│   │   ├── gen-error.sh
+│   │   └── test
+│   │       └── test.sh
+│   └── service
+│       ├── security.go
+│       └── service.go
+├── stringdemoservice-init.go
+├── swagger.yaml
+└── test
+    ├── bdd-stringdemo.go
+    ├── features
+    │   └── stringdemo.feature
+    └── main_test.go
+```
+* **Makefile** - obvious. The only thing is 
+* **
+
 (to be continued)
+
 

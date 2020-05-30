@@ -83,7 +83,15 @@ entries:
     - title: Middleware
       url: /wego_middleware.html
       output: web, pdf
-     
+  
+  - title: Tools
+    output: web,pdf
+    folderitems:
+    
+    - title: ToGO
+      url: /togo.html
+      output: web,pdf
+       
   - title: Horizontal Requirements
     output: web, pdf
     folderitems:
