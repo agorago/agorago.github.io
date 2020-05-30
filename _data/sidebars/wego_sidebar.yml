@@ -43,6 +43,10 @@ entries:
     - title: Setting up WeGO
       output: web,pdf
       url: /wego_setup.html
+    
+    - title: Coding the String Demo Service
+      output: web,pdf
+      url: /stringdemo.html
 
   - title: Concepts
     output: web, pdf
