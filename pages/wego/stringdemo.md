@@ -226,6 +226,19 @@ The structure is shown below:
 ## The Complexity of the Service
 This seems quite elaborate to code for implementing one single service!!
 
+But there are justifications to this:
+1. All codes are internationalized.
+2. All middlewares, error handling, decoding/encoding, conversion are automatically enforced
+3. BDD is available.
+4. Swagger generation is available (though can be improved admittedly)
+5. DevOps is available.
+6. Proxy is available with proxy middlewares
+7. Environment settings are externalized
+8. Dependency injection is standardized.
 
+This makes the difference between normal and enterprise services.
+
+## Code generation 
+We can wego-gen to generate the code. This is separately discussed there.
 
 
