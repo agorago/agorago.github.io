@@ -11,5 +11,7 @@ summary: DevOps on the way for Go programs in general and WeGO services in parti
 ## Introduction
 **ToGO** contains a set of scripts and a template Makefile.
 
+<a name="Makefile"/>
+## Makefile
 --to be continued--
 
