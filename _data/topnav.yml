@@ -24,6 +24,10 @@ topnav_dropdowns:
           external_url: https://github.com/agorago/stringdemoservice
         - title: Sample Deployment Service
           external_url: https://github.com/agorago/sample-deploy
+        - title: Store API
+          external_url: https://github.com/agorago/storeapi
+        - title: Store Service
+          external_url: https://github.com/agorago/storeservice
     - title: Products
       folderitems:
         - title: Wego

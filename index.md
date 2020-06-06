@@ -7,7 +7,7 @@ permalink: index.html
 summary: These brief instructions will help you get started quickly with the WeGO framework.
 ---
 
-{% include note.html content="An introduction to WeGO." %}
+{% include note.html content="An introduction to WeGO. Want to use it write away? Go to <a href='wego_setup.html'>set up page</a>" %}
 
 # Motivation 
 Go Lang has a great ecosystem with multiple frameworks and tools. One of the professed objectives behind creating the language is the creation of a set of tools and more importantly creating a mindset around using them. There exists a lot of literature that defines what constitutes idiomatic Go code. 
