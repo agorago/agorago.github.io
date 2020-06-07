@@ -30,7 +30,7 @@ $ # this will compile all the programs to wego-gen/bin
 We need to create a GO file that contains the interface for the new service that we are going to write. 
 `cd stringdemo `
 Next use your favorite editor to write the GO code below. The # preceded lines annotate the code and should not be literally typed.
-`{% highlight GO linenos %}
+`{% highlight GO %}
 package api
 
 import "context"
