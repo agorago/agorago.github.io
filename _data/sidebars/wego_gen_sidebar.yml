@@ -26,5 +26,13 @@ entries:
     - title: Wego Code Generator Home
       url: /wego_gen_landing_page.html
       output: web
+  - title: Core
+    output: web, pdf
+    folderitems:
+    - title: Getting Started
+      url: /wego_gen_stringdemo.html
+      output: web
+
+      
 
     
