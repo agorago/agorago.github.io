@@ -57,9 +57,9 @@ kramdown:
  hard_wrap: false
  syntax_highlighter: rouge
  highlighter: rouge
-    syntax_highlighter_opts:
-        block:
-            line_numbers: true
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
 
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
