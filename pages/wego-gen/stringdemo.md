@@ -30,7 +30,7 @@ $ # this will compile all the programs to wego-gen/bin
 We need to create a GO file that contains the interface for the new service that we are going to write. 
 `cd stringdemo `
 Next use your favorite editor to write the GO code below. The # preceded lines annotate the code and should not be literally typed.
-```GO
+`{% highlight GO linenos %}
 package api
 
 import "context"
@@ -76,7 +76,7 @@ type StringdemoService interface {
 	// This method illustrates a GET method implementation in BPlus since there is no request payload required
 	AddNumbers(ctx context.Context, arg1 int, arg2 int) (AddNumbersResponse, error)
 }
-```
+{% endhighlight %}
 
 Let us look at the code line by line:
 
