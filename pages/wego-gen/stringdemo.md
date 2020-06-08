@@ -1,5 +1,5 @@
 ---
-title: Stringdemo generation from WeGO-Gen
+title: Stringdemo generation Using WeGO-Gen
 keywords: wego-gen code generation stringdemo
 sidebar: wego_gen_sidebar
 toc: false
