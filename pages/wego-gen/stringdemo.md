@@ -93,11 +93,31 @@ The interface file is expected to have comments which will eventually make it in
 * The comments for each of the request and response parameters. - these become the parameter documentation
 * Method comments - these become the operation documentation. 
 
-## Generating the Service
+## Preparation for Generating the service
+First checkout the contents of config/setenv.sh. It should look like the following:
+{% highlight text %}
+# All generated modules will have the prefix shown below.
+# Tweak this if you want it to be something different
+export URLPrefix="github.com/agorago"
+#  The default start error  code if not specified in gen.sh
+export default_start_error_code=100000
+# The URL for WeGO. Change this if you have forked the WeGO repo
+export wegoURL="github.com/agorago/wego"
+# The destination folder where the modules are generated. 
+export dest_folder=/tmp
+{% endhighlight %}
+Tweak the file if required. The comments are self explanatory
+
+## Generating the stringdemo Service
 {% highlight bash %}
 $ cd stringdemo
 # we are expecting that we will have our stringdemo.go file, wego and wego-gen folders here
 $ wego-gen/bin/gen.sh
-
+<choose option 1 >
+<Specify the stringdemo.go interface file that you have created.>
+<Accept the suggested URLs for the API and the Service folder or specify alternate ones>
+<Accept the start error code>
+$ cd $dest_folder/stringdemoservice # dest_folder as specified in the setenv.sh that was discussed above
+$ This command also creates a configs folder under stringdemo. 
 {% endhighlight %}
 
