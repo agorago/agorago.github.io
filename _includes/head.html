@@ -57,6 +57,9 @@ function switchToCurrentTheme(){
         case "Dark-Blue":
             setThemeDarkBlue();
             break;
+        case "Dark-Blue-Blue":
+            setThemeDarkBlueOnBlue();
+            break;
         case "Light-Green":
             setThemeLightGreen();
             break;
@@ -68,14 +71,24 @@ function switchToCurrentTheme(){
 
 function setThemeDarkGreen(){
     document.getElementById('dark-blue').media='none'
+    document.getElementById('dark-blue-blue').media='none'
     document.getElementById('dark-green').media=''
     document.getElementById('green').media='none'
     document.getElementById('blue').media='none'
     storeCurrentTheme("Dark-Green")
 }
 
+function setThemeDarkBlueOnBlue(){
+    document.getElementById('dark-blue').media='none'
+    document.getElementById('dark-blue-blue').media=''
+    document.getElementById('dark-green').media='none'
+    document.getElementById('green').media='none'
+    document.getElementById('blue').media='none'
+    storeCurrentTheme("Dark-Blue-Blue")
+}
 function setThemeDarkBlue(){
     document.getElementById('dark-blue').media=''
+    document.getElementById('dark-blue-blue').media='none'
     document.getElementById('dark-green').media='none'
     document.getElementById('green').media='none'
     document.getElementById('blue').media='none'
@@ -84,6 +97,7 @@ function setThemeDarkBlue(){
 
 function setThemeLightBlue(){
     document.getElementById('dark-blue').media='none'
+    document.getElementById('dark-blue-blue').media='none'
     document.getElementById('dark-green').media='none'
     document.getElementById('green').media='none'
     document.getElementById('blue').media=''
@@ -92,6 +106,7 @@ function setThemeLightBlue(){
 
 function setThemeLightGreen(){
     document.getElementById('dark-blue').media='none'
+    document.getElementById('dark-blue-blue').media='none'
     document.getElementById('dark-green').media='none'
     document.getElementById('green').media=''
     document.getElementById('blue').media='none'
