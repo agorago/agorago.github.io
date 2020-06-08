@@ -116,6 +116,7 @@ The code for stringdemo would be spread across _stringdemoapi_ and _stringdemose
 ### Can a WeGO service be invoked without the API module?
 Of course. There is nothing special in a WeGO service. It is like any other service available through a protocol (such as HTTP) and that supports various kinds of encodings (like JSON)
 
+<a name="apimodule"/>
 ## API Module structure
 API has the following packages:
 ```

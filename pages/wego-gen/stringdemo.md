@@ -1,5 +1,5 @@
 ---
-title: Stringdemo generation Using WeGO-Gen
+title: Stringdemo Generation Using WeGO-Gen
 keywords: wego-gen code generation stringdemo
 sidebar: wego_gen_sidebar
 toc: false
@@ -21,7 +21,11 @@ $ mkdir stringdemo
 $ cd stringdemo
 $ # Hence forth all references will be with respect to this folder
 $ git clone https://github.com/agorago/wego.git
+# Download the WeGO library
+$ git clone https://github.com/agorago/togo.git
+# Download a set of DevOps scripts that can be used across WeGO projects. This avoids script duplication between projects
 $ git clone github.com/agorago/wego-gen.git
+# Download the WeGO generator which will be used to generate services
 $ cd wego-gen
 $ make 
 $ # this will compile all the programs to wego-gen/bin
@@ -118,6 +122,27 @@ $ wego-gen/bin/gen.sh
 <Accept the suggested URLs for the API and the Service folder or specify alternate ones>
 <Accept the start error code>
 $ cd $dest_folder/stringdemoservice # dest_folder as specified in the setenv.sh that was discussed above
-$ This command also creates a configs folder under stringdemo. 
+$ make run-main 
+# The command above creates a bin folder and builds a main program there. 
+# This command also creates a configs folder under stringdemo. 
+# It executes the built main() program
 {% endhighlight %}
+
+## What Got Generated?
+WeGO-Gen-gen.sh creates two WeGO modules - one for API and one for the service. It confirms the URLs for both the modules. The module structure of these modules is discussed [in this article](/stringdemo.html#apimodule). WeGO-Gen parses the GO file and creates a service that returns an empty response. The service file is created in _stringdemoservice_. The API module is copied to the _api_ package under _stringdemoapi_ module. 
+
+Makefile, configs, error handling structures, environment files etc. are automatically generated. Test case, main file, swagger generation utility etc. are also created. In short, the entire boiler plate required for proper plumbing is done. 
+
+## What do you do next?
+{% highlight bash %}
+$ cd $dest_dir/stringdemoservice
+$ cd internal/service
+$ vi service.go
+#  Edit it to implement the interface. 
+{% endhighlight %}
+
+
+
+
+
 
