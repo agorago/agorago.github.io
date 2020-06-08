@@ -2,7 +2,7 @@
 title: Stringdemo Generation Using WeGO-Gen
 keywords: wego-gen code generation stringdemo
 sidebar: wego_gen_sidebar
-toc: false
+toc: true
 permalink: wego_gen_stringdemo.html
 folder: wego-gen
 summary: How to generate the stringdemo program using WeGo Gen
